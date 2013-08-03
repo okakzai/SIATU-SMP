@@ -1,5 +1,5 @@
 Edit Data Siswa Kelas <font color="blue"><?php echo $kelas;?></font>
-<?php echo form_open('admin/updatesiswa');?>
+<?php echo form_open_multipart('admin/updatesiswa');?>
 <?php foreach ($editsiswa as $data){?>
 <table class="form">
 	<tr>
@@ -34,10 +34,15 @@ Edit Data Siswa Kelas <font color="blue"><?php echo $kelas;?></font>
         <td>
           	<?php
           		$LP=$data->gender;
+				if($LP){
 				if($LP=='L') $kelamin='1';
 				elseif($LP=='P') $kelamin='2';
 				$gender=array('#'=>'Pilih Jenis Kelamin:','1'=>'Laki-laki','2'=>'Perempuan');
 				echo form_dropdown('gender',$gender,$kelamin,'id="gender"');
+				}else{
+					$gender=array('#'=>'Pilih Jenis Kelamin:','1'=>'Laki-laki','2'=>'Perempuan');
+					echo form_dropdown('gender',$gender,'id="gender"');
+				}
 			?>
         </td>
     </tr>
@@ -55,10 +60,12 @@ Edit Data Siswa Kelas <font color="blue"><?php echo $kelas;?></font>
         <td>
           	<?php
           		$date=$data->tgl_lahir;
+				if($date){
 				$lahir=explode('-',$date);
 				$dbtgl=$lahir[2];
 				$dbbln=$lahir[1];
 				$dbthn=$lahir[0];
+				
           	?>
 			<?php
 				$tgl['#']='Pilih Tanggal:';
@@ -76,6 +83,23 @@ Edit Data Siswa Kelas <font color="blue"><?php echo $kelas;?></font>
 				$thn['#']='Pilih Tahun:';
 				for($n=1990; $n<=$now; $n++){$thn[$n]=$n;}
 				echo form_dropdown('thn',$thn,$dbthn,'id="thn"');
+			}else{
+				$tgl['#']='Pilih Tanggal:';
+				for($n=1; $n<=31; $n++){$tgl[$n]=$n;}
+				echo form_dropdown('tgl',$tgl,'id="tgl"');
+			?>
+			&nbsp;
+			<?php
+          		$bln=array('#'=>'Pilih Bulan:','1'=>'Januari','2'=>'Februari','3'=>'Maret','4'=>'April','5'=>'Mei','6'=>'Juni','7'=>'Juli','8'=>'Agustus','9'=>'September','10'=>'Oktober','11'=>'November','12'=>'Desember');
+				echo form_dropdown('bln',$bln,'id="bln"');
+			?>
+			&nbsp;
+			<?php
+          		$now=date("Y");
+				$thn['#']='Pilih Tahun:';
+				for($n=1990; $n<=$now; $n++){$thn[$n]=$n;}
+				echo form_dropdown('thn',$thn,'id="thn"');
+			}
 			?>
         </td>
     </tr>
@@ -141,11 +165,25 @@ Edit Data Siswa Kelas <font color="blue"><?php echo $kelas;?></font>
           	?>
        </td>
 	</tr>
+	<tr>
+         <td>Nilai UN SD</td>
+         <td>
+          	<?php 
+          		$unsd=array('name'=>'unsd','value'=>$data->unsd);
+          		echo form_input($unsd);
+          	?>
+         </td>
+	</tr>
     <tr>
        <td valign="top">Kelas</td>
        <td>
           	<?php
-          		$kelas=array('#'=>'Pilih Kelas:','1'=>'1','2'=>'2','3'=>'3','4'=>'4','5'=>'5','6'=>'6');
+          		$kelas=array(
+								'#'=>'Pilih Kelas:',
+								'7A'=>'7A','7B'=>'7B','7C'=>'7C','7D'=>'7D','7E'=>'7E','7F'=>'7F','7G'=>'7G','7H'=>'7H',
+								'8A'=>'8A','8B'=>'8B','8C'=>'8C','8D'=>'8D','8E'=>'8E','8F'=>'8F','8G'=>'8G','8H'=>'8H',
+								'9A'=>'9A','9B'=>'9B','9C'=>'9C','9D'=>'9D','9E'=>'9E','9F'=>'9F','9G'=>'9G','9H'=>'9H'
+							);
 				echo form_dropdown('kelas',$kelas,$data->kelas,'id="kelas"');
 			?>
        </td>
@@ -154,6 +192,22 @@ Edit Data Siswa Kelas <font color="blue"><?php echo $kelas;?></font>
        <td valign="top">Keterangan (Bila Ada)</td>
        <td><?php echo form_textarea('ket',$data->ket);?></td>
     </tr>
+	<tr>
+        <td>Foto</td>
+        <td>
+			<?php
+			if($data->foto){
+			?>
+			<img src="<?php echo base_url().'asset/img/psb/'.$data->foto;?>" width="150" height="150"/>
+			<br />
+			<input type="file" name="userfile" size="20" />
+			<?php }else{?>
+				<input type="file" name="userfile" size="20" />
+			<?php
+			}
+			?>
+		</td>
+	 </tr>
     <tr>
        <td valign="top"></td>
        <td>

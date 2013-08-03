@@ -144,6 +144,12 @@ class Admin extends CI_Controller {
 		$this->load->view('mainview',$data);
 	}
 	function updatesiswa(){
+		$config['upload_path'] = './asset/img/psb';
+		$config['allowed_types'] = 'gif|jpg|png';
+		$config['max_size']	= '100';
+		$config['max_width']  = '1024';
+		$config['max_height']  = '768';
+		$this->load->library('upload', $config);
 		$nis=$this->input->post('nis');
 		$nama=$this->input->post('nama');
 		$gender=$this->input->post('gender');
@@ -170,7 +176,15 @@ class Admin extends CI_Controller {
 		$tgl=$this->input->post('tgl');
 		$tgl_lahir=$thn.'-'.$bln.'-'.$tgl;
 		$nisn=$this->input->post('nisn');
-		$data=array('nama'=>$nama,'gender'=>$gender,'tempat_lahir'=>$tempat_lahir,'agama'=>$agama,'alamat'=>$alamat,'nama_ayah'=>$nama_ayah,'kerja_ayah'=>$kerja_ayah,'nama_ibu'=>$nama_ibu,'kerja_ibu'=>$kerja_ibu,'kelas'=>$kelas,'ket'=>$ket,'tgl_lahir'=>$tgl_lahir,'nisn'=>$nisn);
+		$unsd=$this->input->post('unsd');
+		if ($this->upload->do_upload()){
+		$upload_data=$this->upload->data();
+			foreach ($upload_data as $item=>$val){
+				$dat[$item]=$val;
+			}
+		$foto=$dat['file_name'];
+		}
+		$data=array('foto'=>$foto,'unsd'=>$unsd,'nama'=>$nama,'gender'=>$gender,'tempat_lahir'=>$tempat_lahir,'agama'=>$agama,'alamat'=>$alamat,'nama_ayah'=>$nama_ayah,'kerja_ayah'=>$kerja_ayah,'nama_ibu'=>$nama_ibu,'kerja_ibu'=>$kerja_ibu,'kelas'=>$kelas,'ket'=>$ket,'tgl_lahir'=>$tgl_lahir,'nisn'=>$nisn);
 		$this->load->model('modeladmin');
 		$update=$this->modeladmin->updatesiswa($nis,$data);   
 		if($update==1){

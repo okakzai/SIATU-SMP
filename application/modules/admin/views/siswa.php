@@ -16,6 +16,7 @@ Edit Data Siswa Kelas <font color="blue"><?php echo $kelas;?></font>
 			<th align="center">Nama Ibu</th>
 			<th align="center">Pekerjaan Ibu</th>
 			<th align="center">Alamat</th>
+			<th align="center">Nilai UN SD</th>
 			<th align="center">Keterangan</th>
 			<th align="center">EDIT</th>
 		</tr>
@@ -41,6 +42,7 @@ Edit Data Siswa Kelas <font color="blue"><?php echo $kelas;?></font>
 			<td align="center"><?php echo $data->nama_ibu;?></td>
 			<td align="center"><?php echo $data->kerja_ibu;?></td>
 			<td align="center"><?php echo $data->alamat;?></td>
+			<td align="center"><?php echo $data->unsd;?></td>
 			<td align="center"><?php echo $data->ket;?></td>
 			<td align="center">
 				<?php

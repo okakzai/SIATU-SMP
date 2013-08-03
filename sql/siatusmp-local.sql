@@ -5,7 +5,7 @@ USE siatusmp;
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Waktu pembuatan: 27. Juli 2013 jam 03:45
+-- Waktu pembuatan: 31. Juli 2013 jam 14:02
 -- Versi Server: 5.5.8
 -- Versi PHP: 5.3.5
 
@@ -481,10 +481,10 @@ CREATE TABLE IF NOT EXISTS `siswa` (
 --
 
 INSERT INTO `siswa` (`no`, `nis`, `nisn`, `nama`, `gender`, `tempat_lahir`, `tgl_lahir`, `agama`, `alamat`, `unsd`, `ket`, `nama_ayah`, `kerja_ayah`, `nama_ibu`, `kerja_ibu`, `kelas`, `foto`) VALUES
-(1, '18853', '', 'ABIANA ELFARABI', 'P', '', NULL, '', '', '', '', '', '', '', '', '7A', ''),
-(2, '18872', '', 'MEINKA DINDA HENDARDI', '', '', NULL, '', '', '', 'Pindah 27-12-2012 ke SMP 1 Pacitan', '', '', '', '', '7A', ''),
-(3, '18885', '', 'ABDUL AZIS', 'L', '', NULL, '', '', '', '', '', '', '', '', '7B', ''),
-(4, '18917', '', 'AGENDA PUSPITANING SABDA A.', 'P', '', NULL, '', '', '', '', '', '', '', '', '7C', ''),
+(1, '18853', '', 'ABIANA ELFARABI', 'P', '', '1991-01-01', '', '', '', '', '', '', '', '', '7A', 'Blue_hills.jpg'),
+(2, '18872', '', 'MEINKA DINDA HENDARDI', 'P', '', '0000-00-00', '', '', '', 'Pindah 27-12-2012 dari SMP 1 Pacitan', '', '', '', '', '7A', ''),
+(3, '18885', '', 'ABDUL AZIS', 'L', '', '1994-01-01', 'Islam', '', '', '', '', '', '', '', '7B', ''),
+(4, '18917', '', 'AGENDA PUSPITANING SABDA A.', 'P', '', '0000-00-00', 'Katolik', '', '34', '', '', '', '', '', '7C', 'Sunset.jpg'),
 (5, '18949', '', 'ADINDA LUPITASARI', 'P', '', NULL, '', '', '', '', '', '', '', '', '7D', ''),
 (6, '18981', '', 'AJI FIRMAN CAHYA WARDHANA', 'L', '', NULL, '', '', '', '', '', '', '', '', '7E', ''),
 (7, '19013', '', 'ABDILLAH FARHAN NOVANTO  ', 'L', '', NULL, '', '', '', '', '', '', '', '', '7F', ''),
@@ -510,7 +510,7 @@ INSERT INTO `siswa` (`no`, `nis`, `nisn`, `nama`, `gender`, `tempat_lahir`, `tgl
 (27, '18369', '', 'APRILIA ANGGUN MIA ADI P.A.', 'P', '', NULL, '', '', '', '', '', '', '', '', '9G', ''),
 (28, '18569', '', 'AHLAN LINGGAR BAYU SAPUTRO', '', '', NULL, '', '', '', 'PINDAH SMPN 2 GENENG', '', '', '', '', '9G', ''),
 (29, '18385', '', 'RAMADHANI PUTRA PRASETIA', 'L', '', NULL, '', '', '', '', '', '', '', '', '9H', ''),
-(33, '18414', '', 'Fatin', 'P', 'Jakarta', '1998-01-01', 'Islam', 'Ngawi', '98', '', 'Murdi', 'Penjahit', 'Enok', 'Pemijat', '7C', 'Woman.png');
+(33, '18414', '', 'Fatin', 'P', 'Jakarta', '1998-01-01', 'Islam', 'Ngawi', '98', 'Pindah 27-12-2012 dari SMP N 17 Jakarta', 'Murdi', 'Penjahit', 'Enok', 'Pemijat', '7C', 'Woman.png');
 
 -- --------------------------------------------------------
 
