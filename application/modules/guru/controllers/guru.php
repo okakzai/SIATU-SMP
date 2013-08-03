@@ -96,23 +96,23 @@ class Guru extends CI_Controller {
 		foreach($matpel as $dat){
 			$matpel=$dat->matpel;
 		}
-		if(($matpel=='Kelas 1')||($matpel=='Kelas 2')||($matpel=='Kelas 3')||($matpel=='Kelas 4')||($matpel=='Kelas 5')||($matpel=='Kelas 6')){
-			$data['matpel']=$matpel;		
-			$data['tipe']=$this->session->userdata('tipe');
-			$mat=explode(' ',$matpel);
-			$kelas=$mat[1];
-			$data['siswa']=$this->modelguru->carisiswakelas($kelas);
-			$this->load->view('nilai/kelas',$data);
-		}
-		elseif(($matpel=='PA')||($matpel=='PJK')||($matpel=='BING')||($matpel=='TIK')){
+		//if(($matpel=='Kelas 1')||($matpel=='Kelas 2')||($matpel=='Kelas 3')||($matpel=='Kelas 4')||($matpel=='Kelas 5')||($matpel=='Kelas 6')){
+			//$data['matpel']=$matpel;		
+			//$data['tipe']=$this->session->userdata('tipe');
+			//$mat=explode(' ',$matpel);
+			//$kelas=$mat[1];
+			//$data['siswa']=$this->modelguru->carisiswakelas($kelas);
+			//$this->load->view('nilai/kelas',$data);
+		//}
+		//elseif(($matpel=='PA')||($matpel=='PJK')||($matpel=='BING')||($matpel=='TIK')){
 			$data['matpel']=$matpel;	
 			$data['tipe']=$this->session->userdata('tipe');
 			$data['siswa']=$this->modelguru->siswa();
 			$this->load->view('nilai/khusus',$data);
-		}
-		else{
-			redirect('guru');
-		}
+		//}
+		//else{
+			//redirect('guru');
+		//}
 	}
 	
 	function nilai(){
@@ -123,28 +123,28 @@ class Guru extends CI_Controller {
 		foreach($matpel as $dat){
 			$matpel=$dat->matpel;
 		}
-		if(($matpel=='Kelas 1')||($matpel=='Kelas 2')||($matpel=='Kelas 3')||($matpel=='Kelas 4')||($matpel=='Kelas 5')||($matpel=='Kelas 6')){
-			$data['content']='guru';
-			$data['matpel']=$matpel;	
-			$data['subcontent']='nilai/kelas';	
-			$data['tipe']=$this->session->userdata('tipe');
-			$mat=explode(' ',$matpel);
-			$kelas=$mat[1];
-			$data['siswa']=$this->modelguru->carisiswakelas($kelas);
-			$this->load->view('mainview',$data);
-		}
-		elseif(($matpel=='PA')||($matpel=='PJK')||($matpel=='BING')||($matpel=='TIK')){
+		//if(($matpel=='Kelas 1')||($matpel=='Kelas 2')||($matpel=='Kelas 3')||($matpel=='Kelas 4')||($matpel=='Kelas 5')||($matpel=='Kelas 6')){
+			//$data['content']='guru';
+			//$data['matpel']=$matpel;	
+			//$data['subcontent']='nilai/kelas';	
+			//$data['tipe']=$this->session->userdata('tipe');
+			//$mat=explode(' ',$matpel);
+			//$kelas=$mat[1];
+			//$data['siswa']=$this->modelguru->carisiswakelas($kelas);
+			//$this->load->view('mainview',$data);
+		//}
+		//elseif(($matpel=='PA')||($matpel=='PJK')||($matpel=='BING')||($matpel=='TIK')){
 			$data['content']='guru';
 			$data['matpel']=$matpel;	
 			$data['subcontent']='nilai/khusus';	
 			$data['tipe']=$this->session->userdata('tipe');
 			$data['siswa']=$this->modelguru->siswa();
 			$this->load->view('mainview',$data);
-		}
-		else{
-			redirect('guru');
+		//}
+		//else{
+			//redirect('guru');
 		
-		}
+		//}
 	}
 	function inputnilai($nis,$guruid){
 		$this->load->model('modelguru');	
@@ -160,18 +160,18 @@ class Guru extends CI_Controller {
 			$subid=$dat->subid;
 		}
 
-		if(($matpel=='Kelas 1')||($matpel=='Kelas 2')||($matpel=='Kelas 3')||($matpel=='Kelas 4')||($matpel=='Kelas 5')||($matpel=='Kelas 6')){
-			$data['subcontent']='nilai/kelaspersiswa';
-		}
-		elseif(($matpel=='PA')||($matpel=='PJK')||($matpel=='BING')||($matpel=='TIK')){
+		//if(($matpel=='Kelas 1')||($matpel=='Kelas 2')||($matpel=='Kelas 3')||($matpel=='Kelas 4')||($matpel=='Kelas 5')||($matpel=='Kelas 6')){
+			//$data['subcontent']='nilai/kelaspersiswa';
+		//}
+		//elseif(($matpel=='PA')||($matpel=='PJK')||($matpel=='BING')||($matpel=='TIK')){
 			$data['subcontent']='nilai/khususpersiswa';
 			$data['matpelname']=$matpelname;
 			$data['matpel']=$subid;
 			$data['subname']=$subname;
-		}
-		else{
-			redirect('guru');
-		}	
+		//}
+		//else{
+			//redirect('guru');
+		//}	
 		$data['tipe']=$this->session->userdata('tipe');
 		$data['siswa']=$this->modelguru->carinis($nis);
 		$this->load->view('mainview',$data);

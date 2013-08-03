@@ -1,5 +1,5 @@
 <?php
-	$now=date("Y");
+	$now=2030;
 	$thn['#']='Pilih Tahun:';
 	for($n=2009; $n<=$now; $n++){$thn[$n]=$n;}
 	echo form_dropdown('lapthn',$thn,set_value('thn'),'id="lapthn" style="font-size:10px;"');

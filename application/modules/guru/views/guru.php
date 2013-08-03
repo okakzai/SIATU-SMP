@@ -8,12 +8,30 @@
 						<li>
 							<?php echo anchor('guru','Absensi','id="absensi"');?>
 							<ul>
-                				<li><?php echo anchor('guru/absensi/1','Absensi Kelas 1');?></li>
-                				<li><?php echo anchor('guru/absensi/2','Absensi Kelas 2');?></li>
-                				<li><?php echo anchor('guru/absensi/3','Absensi Kelas 3');?></li>
-                				<li><?php echo anchor('guru/absensi/4','Absensi Kelas 4');?></li>
-                				<li><?php echo anchor('guru/absensi/5','Absensi Kelas 5');?></li>
-                				<li><?php echo anchor('guru/absensi/6','Absensi Kelas 6');?></li>
+                				<li><?php echo anchor('guru/absensi/7A','7A');?></li>
+                				<li><?php echo anchor('guru/absensi/7B','7B');?></li>
+                				<li><?php echo anchor('guru/absensi/7C','7C');?></li>
+                				<li><?php echo anchor('guru/absensi/7D','7D');?></li>
+                				<li><?php echo anchor('guru/absensi/7E','7E');?></li>
+                				<li><?php echo anchor('guru/absensi/7F','7F');?></li>
+								<li><?php echo anchor('guru/absensi/7G','7G');?></li>
+								<li><?php echo anchor('guru/absensi/7H','7H');?></li>
+								<li><?php echo anchor('guru/absensi/8A','8A');?></li>
+                				<li><?php echo anchor('guru/absensi/8B','8B');?></li>
+                				<li><?php echo anchor('guru/absensi/8C','8C');?></li>
+                				<li><?php echo anchor('guru/absensi/8D','8D');?></li>
+                				<li><?php echo anchor('guru/absensi/8E','8E');?></li>
+                				<li><?php echo anchor('guru/absensi/8F','8F');?></li>
+								<li><?php echo anchor('guru/absensi/8G','8G');?></li>
+								<li><?php echo anchor('guru/absensi/8H','8H');?></li>
+								<li><?php echo anchor('guru/absensi/9A','9A');?></li>
+                				<li><?php echo anchor('guru/absensi/9B','9B');?></li>
+                				<li><?php echo anchor('guru/absensi/9C','9C');?></li>
+                				<li><?php echo anchor('guru/absensi/9D','9D');?></li>
+                				<li><?php echo anchor('guru/absensi/9E','9E');?></li>
+                				<li><?php echo anchor('guru/absensi/9F','9F');?></li>
+								<li><?php echo anchor('guru/absensi/9G','9G');?></li>
+								<li><?php echo anchor('guru/absensi/9H','9H');?></li>
             				</ul>
             			</li>
 						<li><?php echo anchor('guru/nilai','Nilai','id="nilai"');?></li>

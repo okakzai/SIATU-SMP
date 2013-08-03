@@ -5,7 +5,7 @@
 				<th rowspan="2" align="center">NIS</th>
 				<th rowspan="2" align="center">Nama Lengkap</th>
 				<th rowspan="2" align="center">Tingkat</th>
-				<th colspan="14" align="center">Nilai</th>
+				<th colspan="16" align="center">Nilai</th>
 			</tr>
 			<tr>
 				<th align="center">PA</th>
@@ -18,10 +18,12 @@
 				<th align="center">PJK</th>
 				<th align="center">BJW</th>
 				<th align="center">BING</th>
+				<th align="center">TIK</th>
+				<th align="center">TBoga</th>
+				<th align="center">TBusana</th>
+				<th align="center">BK</th>
 				<th align="center">Jumlah</th>
 				<th align="center">Rata2</th>
-				<th align="center">PRAM</th>
-				<th align="center">TIK</th>
 			</tr>
 			<tr>
 				<td align="center">1.</td>
@@ -38,10 +40,12 @@
 				<td align="center"><?php if(isset($pjk)) echo $pjk;?></td>
 				<td align="center"><?php if(isset($bjw)) echo $bjw;?></td>
 				<td align="center"><?php if(isset($bing)) echo $bing;?></td>
+				<td align="center"><?php if(isset($tik)) echo $sbk;?></td>
+				<td align="center"><?php if(isset($tboga)) echo $pjk;?></td>
+				<td align="center"><?php if(isset($tbusana)) echo $bjw;?></td>
+				<td align="center"><?php if(isset($bk)) echo $bing;?></td>
 				<td align="center"><?php if(isset($jumlah)) echo $jumlah;?></td>
 				<td align="center"><?php if(isset($rata2)) echo $rata2;?></td>
-				<td align="center"><?php if(isset($pram)) echo $pram;?></td>
-				<td align="center"><?php if(isset($tik)) echo $tik;?></td>
 			</tr>
 	</tbody>
 </table>

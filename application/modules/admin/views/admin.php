@@ -9,12 +9,30 @@
 							<?php echo anchor('admin','Edit Data Siswa','id="editsiswa"');?>
 							<ul>
 								<li>
-									<?php echo anchor('admin/siswa/1','Edit Data Siswa Kelas 1');?>
-									<?php echo anchor('admin/siswa/2','Edit Data Siswa Kelas 2');?>
-									<?php echo anchor('admin/siswa/3','Edit Data Siswa Kelas 3');?>
-									<?php echo anchor('admin/siswa/4','Edit Data Siswa Kelas 4');?>
-									<?php echo anchor('admin/siswa/5','Edit Data Siswa Kelas 5');?>
-									<?php echo anchor('admin/siswa/6','Edit Data Siswa Kelas 6');?>
+									<?php echo anchor('admin/siswa/7A','Kelas 7A');?>
+									<?php echo anchor('admin/siswa/7B','Kelas 7B');?>
+									<?php echo anchor('admin/siswa/7C','Kelas 7C');?>
+									<?php echo anchor('admin/siswa/7D','Kelas 7D');?>
+									<?php echo anchor('admin/siswa/7E','Kelas 7E');?>
+									<?php echo anchor('admin/siswa/7F','Kelas 7F');?>
+									<?php echo anchor('admin/siswa/7G','Kelas 7G');?>
+									<?php echo anchor('admin/siswa/7H','Kelas 7H');?>
+									<?php echo anchor('admin/siswa/7A','Kelas 8A');?>
+									<?php echo anchor('admin/siswa/7B','Kelas 8B');?>
+									<?php echo anchor('admin/siswa/7C','Kelas 8C');?>
+									<?php echo anchor('admin/siswa/7D','Kelas 8D');?>
+									<?php echo anchor('admin/siswa/7E','Kelas 8E');?>
+									<?php echo anchor('admin/siswa/7F','Kelas 8F');?>
+									<?php echo anchor('admin/siswa/7G','Kelas 8G');?>
+									<?php echo anchor('admin/siswa/7H','Kelas 8H');?>
+									<?php echo anchor('admin/siswa/7A','Kelas 9A');?>
+									<?php echo anchor('admin/siswa/7B','Kelas 9B');?>
+									<?php echo anchor('admin/siswa/7C','Kelas 9C');?>
+									<?php echo anchor('admin/siswa/7D','Kelas 9D');?>
+									<?php echo anchor('admin/siswa/7E','Kelas 9E');?>
+									<?php echo anchor('admin/siswa/7F','Kelas 9F');?>
+									<?php echo anchor('admin/siswa/7G','Kelas 9G');?>
+									<?php echo anchor('admin/siswa/7H','Kelas 9H');?>
 								</li>
 							</ul>
 						</li>

@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Waktu pembuatan: 27. Juli 2013 jam 02:30
+-- Waktu pembuatan: 27. Juli 2013 jam 03:45
 -- Versi Server: 5.5.8
 -- Versi PHP: 5.3.5
 
@@ -194,30 +194,34 @@ INSERT INTO `kegiatan` (`fotoid`, `nama`) VALUES
 
 CREATE TABLE IF NOT EXISTS `mid1pr` (
   `no` int(11) NOT NULL AUTO_INCREMENT,
-  `nis` varchar(4) COLLATE latin1_general_ci NOT NULL,
+  `nis` varchar(7) COLLATE latin1_general_ci NOT NULL,
   `kelas` int(11) NOT NULL,
   `matpel` int(2) NOT NULL,
   `nilai` varchar(3) COLLATE latin1_general_ci NOT NULL,
   PRIMARY KEY (`no`)
-) ENGINE=MyISAM  DEFAULT CHARSET=latin1 COLLATE=latin1_general_ci AUTO_INCREMENT=13 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=latin1 COLLATE=latin1_general_ci AUTO_INCREMENT=29 ;
 
 --
 -- Dumping data untuk tabel `mid1pr`
 --
 
 INSERT INTO `mid1pr` (`no`, `nis`, `kelas`, `matpel`, `nilai`) VALUES
-(1, '1851', 4, 12, 'A'),
-(2, '1851', 4, 2, '12'),
-(3, '1851', 4, 4, '23'),
-(4, '1851', 4, 5, '34'),
-(5, '1851', 4, 6, '45'),
-(6, '1851', 4, 7, '56'),
-(7, '1851', 4, 9, '67'),
-(8, '1851', 4, 3, '78'),
-(9, '1851', 4, 11, 'C'),
-(10, '1851', 4, 1, '90'),
-(11, '1851', 4, 8, '33'),
-(12, '1851', 4, 10, '77');
+(14, '18853', 7, 2, '20'),
+(13, '18853', 7, 1, '10'),
+(15, '18853', 7, 3, '30'),
+(16, '18853', 7, 4, '40'),
+(17, '18853', 7, 5, '50'),
+(18, '18853', 7, 6, '60'),
+(19, '18853', 7, 7, '70'),
+(20, '18853', 7, 8, '80'),
+(21, '18853', 7, 9, '90'),
+(22, '18853', 7, 10, '100'),
+(23, '18853', 7, 11, '95'),
+(24, '18853', 7, 12, '85'),
+(25, '18853', 7, 11, '95'),
+(26, '18853', 7, 12, '85'),
+(27, '18853', 7, 13, '75'),
+(28, '18853', 7, 14, '65');
 
 -- --------------------------------------------------------
 

@@ -67,7 +67,7 @@ class Laporan extends CI_Controller {
 			$data['nama']=$dat->nama;
 			$data['kelas']=$dat->kelas;
 		}
-		for($matpel=1; $matpel<=12; $matpel++){
+		for($matpel=1; $matpel<=14; $matpel++){
 			$pkn=$this->modellaporan->carinilai($tabel,$nis,$matpel);
 			foreach ($pkn as $dat){$nilai[$matpel]=$dat->nilai;}
 		}
@@ -79,13 +79,15 @@ class Laporan extends CI_Controller {
 		if(isset($nilai[8])) $data['pjk']=$nilai[8]; else $nilai[8]=0;
 		if(isset($nilai[9])) $data['bjw']=$nilai[9]; else $nilai[9]=0;
 		if(isset($nilai[3])) $data['bin']=$nilai[3]; else $nilai[3]=0;
-		if(isset($nilai[11])) $data['pram']=$nilai[11]; else $nilai[11]=0;
+		if(isset($nilai[11])) $data['bk']=$nilai[11]; else $nilai[11]=0;
 		if(isset($nilai[12])) $data['tik']=$nilai[12]; else $nilai[12]=0;
+		if(isset($nilai[13])) $data['tboga']=$nilai[13]; else $nilai[13]=0;
+		if(isset($nilai[14])) $data['tbusana']=$nilai[14]; else $nilai[14]=0;
 		if(isset($nilai[10])) $data['bing']=$nilai[10]; else $nilai[10]=0;
 		if(isset($nilai[1])) $data['pa']=$nilai[1]; else $nilai[1]=0;
-		$jumlah=$nilai[1]+$nilai[2]+$nilai[3]+$nilai[4]+$nilai[5]+$nilai[6]+$nilai[7]+$nilai[8]+$nilai[9]+$nilai[10];
+		$jumlah=$nilai[1]+$nilai[2]+$nilai[3]+$nilai[4]+$nilai[5]+$nilai[6]+$nilai[7]+$nilai[8]+$nilai[9]+$nilai[10]+$nilai[11]+$nilai[12]+$nilai[13]+$nilai[14];
 		$data['jumlah']=$jumlah;
-		$rata2=$jumlah/10;
+		$rata2=$jumlah/14;
 		$rata2=round($rata2,1);
 		$data['rata2']=$rata2;
 		$this->load->view('tabelnilai',$data);
