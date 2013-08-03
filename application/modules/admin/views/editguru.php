@@ -69,7 +69,19 @@
        <td valign="top">Mata Pelajaran</td>
        <td>
           	<?php
-          	$matpel=array('#'=>'Pilih Mata Pelajaran:','Kepala Sekolah'=>'Kepala Sekolah','Kelas 1'=>'Kelas 1','Kelas 2'=>'Kelas 2','Kelas 3'=>'Kelas 3','Kelas 4'=>'Kelas 4','Kelas 5'=>'Kelas 5','Kelas 6'=>'Kelas 6','PA'=>'PA','PJK'=>'PJK','BING'=>'BING','TIK'=>'TIK','Karyawan'=>'Karyawan');
+          	$matpel=array('#'=>'Pilih Mata Pelajaran:','PA'=>'PA',
+				'PKN'=>'PKN','BIN'=>'BIN',
+				'MAT'=>'MAT',
+				'IPA'=>'IPA',
+				'IPS'=>'IPS',
+				'SBK'=>'SBK',
+				'PJK'=>'PJK',
+				'BJW'=>'BJW',
+				'BING'=>'BING',
+				'BK'=>'BK',
+				'TIK'=>'TIK',
+				'TBoga'=>'TBoga',
+				'TBusana'=>'TBusana');
 				echo form_dropdown('matpel',$matpel,$data->matpel,'id="matpel"');
 			?> 
        </td>
