@@ -57,11 +57,7 @@
 					//echo anchor($webdev_link,$webdev_name,'target="_blank"');
     			?>
 				<!--. All rights reserved-->
-<<<<<<< HEAD
 				<center>Develop by <a href="mailto:okakzai@gmail.com">Zainal Abidin</a>
-=======
-				<center>Develop by <a href="mailto:sdnbogem1@yahoo.co.id">Arif Asikin</a>
->>>>>>> 0e3021f8eeb3c804f4498f5bf7b24d53f3d15dd3
     		</div>
   		</div>
 	</div>  		
