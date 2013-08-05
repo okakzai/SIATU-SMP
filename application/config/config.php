@@ -20,8 +20,13 @@ $config['base_url']	='http://localhost/siatusmp/';
 $config['app_name']	='SISTEM INFORMASI AKADEMIK TERPADU';
 $config['client_name']	='SMP NEGERI 1 NGAWI';
 $config['addr_name']	='Jl. Ronggowarsito No. 1 Ngawi - Telp. (0351) 749142 - Email: smpn1_ngw@yahoo.co.id';
+<<<<<<< HEAD
 $config['webdev_name']	='okakzai';
 $config['webdev_link']	='http://facebook.com/okakzai/';
+=======
+$config['webdev_name']	='kakzai';
+$config['webdev_link']	='http://facebook.com/kakzai/';
+>>>>>>> 0e3021f8eeb3c804f4498f5bf7b24d53f3d15dd3
 /*
 |--------------------------------------------------------------------------
 | Index File
@@ -32,7 +37,11 @@ $config['webdev_link']	='http://facebook.com/okakzai/';
 | variable so that it is blank.
 |
 */
+<<<<<<< HEAD
 $config['index_page'] = '';
+=======
+$config['index_page'] = 'index.php';
+>>>>>>> 0e3021f8eeb3c804f4498f5bf7b24d53f3d15dd3
 
 /*
 |--------------------------------------------------------------------------
