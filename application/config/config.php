@@ -33,7 +33,10 @@ $config['webdev_link']	='http://facebook.com/okakzai/';
 |
 */
 $config['index_page'] = '';
+<<<<<<< HEAD
 
+=======
+>>>>>>> b69e0aa895c8bdcd94ac27f71b6586cab6c9a064
 /*
 |--------------------------------------------------------------------------
 | URI PROTOCOL
